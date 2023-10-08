@@ -30,5 +30,16 @@ echo
 echo
 echo
 echo
-echo "----------------------
-echo install ngrok
+echo "---------------------------------------------"
+echo run ngrok
+read -p "Paste Authtoken ngrok:" NAUTHTOKEN
+echo "---------------------------------------------"
+echo "choose your region:"
+echo "region code            Location
+echo "ap                     asia (Singapore)"
+echo "au                     Australia"
+echo "eu                     Europe"
+echo "in                     India"
+echo "jp                     Japan"
+echo "sa                     South America(Ohio)"
+
