@@ -38,12 +38,12 @@ sudo read -p "Paste Authtoken ngrok:" NAUTH
 echo "---------------------------------------------"
 echo "choose your region:"
 echo "region code            Location
-echo "ap                     asia (Singapore)"
+echo "ap                     asia "
 echo "au                     Australia"
 echo "eu                     Europe"
 echo "in                     India"
 echo "jp                     Japan"
-echo "sa                     South America(Ohio)"
+echo "sa                     South America"
 read -p "REGION: " NREGION
 echo "---------------------------------------------"
 echo "run ngrok:"
