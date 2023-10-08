@@ -36,20 +36,10 @@ echo "---------------------------------------------"
 echo run ngrok
 read -p "Paste Authtoken ngrok:" NAUTH
 echo "---------------------------------------------"
-echo "choose your region:"
-echo "region code            Location "
-echo "ap                     asia "
-echo "au                     Australia"
-echo "eu                     Europe"
-echo "in                     India"
-echo "jp                     Japan"
-echo "sa                     South America"
-read -p "REGION: " NREGION
+read -p "REGION: " NREGION "---------------------------------------------"
+echo "run ngrok"
+ docker run -it -e NGROK_AUTHTOKEN=$NAUTH ngrok/ngrok tcp 5900 --region=$NREGION &
 echo "---------------------------------------------"
-echo "run ngrok:"
- docker run -it -e NGROK_AUTHTOKEN=$NAUTH ngrok/ngrok tcp 5900 --region=NREGION &
-echo "---------------------------------------------"
-echo "run vm"
 qemu-system-x86_64 -m 9999 -M pc -boot d -cpu host -enable-kvm -device vmware-svga,vgamem_mb=512 -device rtl8139,netdev=net0 -netdev user,id=net0 -enable-kvm -smp 3,cores=3,threads=1,sockets=1 -vnc localhost:0 -cdrom eeepc-v0.9.iso
 
 
