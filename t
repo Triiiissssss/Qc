@@ -49,6 +49,8 @@ echo "---------------------------------------------"
 echo "run ngrok:"
  docker run -it -e NGROK_AUTHTOKEN=$NAUTH ngrok/ngrok tcp 5900 --region=NREGION &
 echo "---------------------------------------------"
+echo "run vm"
+qemu-system-x86_64 -m 9999 -M pc -boot d -cpu host -enable-kvm -device vmware-svga,vgamem_mb=512 -device rtl8139,netdev=net0 -netdev user,id=net0 -enable-kvm -smp 3,cores=3,threads=1,sockets=1 -vnc localhost:0 -cdrom eeepc-v0.9.iso
 
 
 
