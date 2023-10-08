@@ -3,7 +3,7 @@ wget "https://downloads.sourceforge.net/project/android-x86/Release%200.9/eeepc-
 echo "---------------------"
 echo find qemu
 sleep 1
-if command -v /bin/ >/dev/null; then
+if command -v /bin/qemu-system-x86_64 >/dev/null; then
     echo "ok"
 else
     echo "fail,install qemu"
