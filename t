@@ -34,10 +34,10 @@ echo
 echo
 echo "---------------------------------------------"
 echo run ngrok
-sudo read -p "Paste Authtoken ngrok:" NAUTH
+read -p "Paste Authtoken ngrok:" NAUTH
 echo "---------------------------------------------"
 echo "choose your region:"
-echo "region code            Location
+echo "region code            Location "
 echo "ap                     asia "
 echo "au                     Australia"
 echo "eu                     Europe"
