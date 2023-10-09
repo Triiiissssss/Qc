@@ -36,7 +36,9 @@ clear "---------------------------------------------"
 echo run ngrok
 read -p "Paste Authtoken ngrok:" NAUTH
 echo "---------------------------------------------"
-read -p "REGION: " NREGION "---------------------------------------------"
+
+read -p "REGION: " NREGION
+ "---------------------------------------------"
 echo "run ngrok"
  docker run -it -e NGROK_AUTHTOKEN=$NAUTH ngrok/ngrok tcp 5900 --region=$NREGION &
 echo "---------------------------------------------"
