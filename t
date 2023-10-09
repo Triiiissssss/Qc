@@ -4,14 +4,13 @@ echo "---------------------"
 echo find qemu
 sleep 1
 if command -v /bin/qemu-system-x86_64 >/dev/null; then
-    echo "ok"
+    echo "ok" 
 else
-    echo "fail,install qemu"
+    echo "fail,install qemu" && sleep 2 && sudo apt install qemu-system
 fi
 echo "-------------suf-------------"
 sleep 1
-sudo apt update -y
-sudo apt install qemu-system -y
+clear
 echo
 echo
 echo
@@ -32,7 +31,8 @@ echo
 echo
 echo
 echo
-echo "---------------------------------------------"
+echo
+clear "---------------------------------------------"
 echo run ngrok
 read -p "Paste Authtoken ngrok:" NAUTH
 echo "---------------------------------------------"
